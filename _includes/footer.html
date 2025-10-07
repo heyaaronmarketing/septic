@@ -1,0 +1,32 @@
+<!--
+  Site footer. Contains business contact information, navigation links and attribution.
+-->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p>{{ site.business_name }}<br>
+          {{ site.address }}<br>
+          Phone: <a href="tel:{{ site.call_tracking_phone | remove:'(' | remove:')' | remove:' ' | remove:'‑' }}">{{ site.call_tracking_phone }}</a><br>
+          Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="{{ site.baseurl }}/">Home</a></li>
+          <li><a href="{{ site.baseurl }}/services/">Services</a></li>
+          <li><a href="{{ site.baseurl }}/about/">About</a></li>
+          <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
+          <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Our Promise</h3>
+        <p>We’re a local, family‑owned business that treats every pane as if it were our own. When you want crystal‑clear windows without the runaround, we’re the crew for you.</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.business_name }}. All rights reserved.</p>
+  </div>
+</footer>
