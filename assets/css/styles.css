@@ -1,0 +1,134 @@
+/* Basic styles for the Huntsville Window Washing site. */
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fafafa;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.site-header {
+  background: #005d99;
+  color: #fff;
+  padding: 1rem 0;
+}
+.site-header .branding h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.site-header .branding .tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #dbefff;
+}
+.site-header .site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.site-header .site-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.site-header .site-nav a:hover {
+  text-decoration: underline;
+}
+.site-header .cta {
+  margin-top: 0.5rem;
+}
+.site-header .cta a {
+  background: #ffcc00;
+  color: #005d99;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.site-header .cta a:hover {
+  background: #ffe680;
+}
+
+/* Footer */
+.site-footer {
+  background: #003e64;
+  color: #fff;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+.site-footer h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+}
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+.site-footer .footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.site-footer .footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+/* Page & post styles */
+.page-title,
+.post-title {
+  color: #005d99;
+  margin-top: 0;
+}
+.post-meta {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.post-cta {
+  margin-top: 2rem;
+  background: #eef7fd;
+  padding: 1rem;
+  border-left: 4px solid #005d99;
+}
+.post-cta a {
+  color: #005d99;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .site-header .site-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .site-footer .footer-columns {
+    flex-direction: column;
+  }
+}
