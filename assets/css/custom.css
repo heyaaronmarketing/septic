@@ -1,0 +1,24 @@
+/* Custom overrides for 2025 refresh */
+:root {
+  --primary: #0A3D62;
+  --secondary: #2E86DE;
+  --accent: #FDCB6E;
+  --accent-hover: #FFEAA7;
+  --background: #F8F9FA;
+  --text: #333333;
+  --light-text: #666666;
+  --border-radius: 8px;
+}
+
+/* Increase base line-height and spacing for readability */
+body {
+  line-height: 1.8;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+p {
+  margin-bottom: 1.75rem;
+}
