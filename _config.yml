@@ -1,0 +1,41 @@
+# Basic site configuration for the local SEO window‑washing website.  
+# Update the values in this file to point to your actual domain and tracking IDs.
+
+title: "Huntsville Window Washing Experts"
+description: "Professional window washing services in Huntsville, TX. Residential & commercial window cleaning to keep your view crystal clear."
+
+## Site URL configuration
+# When you host the site, set `url` to the fully qualified domain name (e.g., https://huntsvillewindows.com).  
+# `baseurl` should remain empty if the site lives at the root of the domain.  
+url: ""
+baseurl: ""
+
+## Business information used throughout the site and in the schema markup
+business_name: "Huntsville Window Washing"
+address: "123 Main St, Huntsville, TX 77331"
+service_city: "Huntsville"
+service_state: "TX"
+service_zip: "77331"
+call_tracking_phone: "(936) 555‑1234"
+email: "info@huntsvillewindowwashing.com"
+
+## Analytics & integrations
+# Place holders for analytics and advertising IDs.  
+# Replace with your Google Analytics, Google Tag Manager or other integration identifiers.
+google_analytics_id: "UA‑XXXXXXX‑X"
+google_tag_manager_id: "GTM‑XXXXXXX"
+
+## Markdown & permalink settings
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+
+## Collection settings
+collections:
+  posts:
+    output: true
+
+## Exclude files or directories from the build
+exclude:
+  - README.md
+  - node_modules
+  - vendor
