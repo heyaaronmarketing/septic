@@ -1,0 +1,25 @@
+<!--
+  Site header/navigation. This include appears on every page.
+  It pulls the business name and phone number from the configuration file.
+-->
+<header class="site-header">
+  <div class="container">
+    <div class="branding">
+      <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.business_name }}</a></h1>
+      <p class="tagline">Clear views. Clean slate. Get a streak‑free shine in Huntsville.</p>
+    </div>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
+        <li><a href="{{ site.baseurl }}/about/">About</a></li>
+        <li><a href="{{ site.baseurl }}/services/">Services</a></li>
+        <li><a href="{{ site.baseurl }}/service-area/">Service Area</a></li>
+        <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+        <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cta">
+      <a class="cta-phone" href="tel:{{ site.call_tracking_phone | remove:'(' | remove:')' | remove:' ' | remove:'‑' }}">Call {{ site.call_tracking_phone }}</a>
+    </div>
+  </div>
+</header>
