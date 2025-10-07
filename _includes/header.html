@@ -5,6 +5,25 @@
 <header class="site-header">
   <div class="container">
     <div class="branding">
+      <!-- Logo: window with squeegee icon -->
+      <div class="logo">
+        <svg width="48" height="48" viewBox="0 0 64 64" aria-labelledby="logoTitle" role="img" xmlns="http://www.w3.org/2000/svg">
+          <title id="logoTitle">{{ site.business_name }} logo</title>
+          <!-- Outer frame of the window -->
+          <rect x="1" y="1" width="62" height="62" rx="6" ry="6" fill="none" stroke="#0A3D62" stroke-width="4" />
+          <!-- Vertical divider -->
+          <line x1="32" y1="6" x2="32" y2="58" stroke="#0A3D62" stroke-width="4" />
+          <!-- Horizontal divider -->
+          <line x1="6" y1="32" x2="58" y2="32" stroke="#0A3D62" stroke-width="4" />
+          <!-- Squeegee blade -->
+          <rect x="14" y="8" width="20" height="6" rx="2" fill="#2E86DE" />
+          <!-- Squeegee handle -->
+          <rect x="24" y="14" width="4" height="14" fill="#2E86DE" />
+          <!-- Sparkle accents -->
+          <polygon points="48,44 52,44 50,48" fill="#FDCB6E" />
+          <polygon points="50,46 54,46 52,50" fill="#FDCB6E" />
+        </svg>
+      </div>
       <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.business_name }}</a></h1>
       <p class="tagline">Clear views. Clean slate. Get a streak‑free shine in Huntsville.</p>
     </div>
