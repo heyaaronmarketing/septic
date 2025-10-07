@@ -1,35 +1,82 @@
-/* Basic styles for the Huntsville Window Washing site. */
+/* Updated modern styles for the Huntsville Window Washing site (2025) */
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #fafafa;
+/* Import the Inter font from Google Fonts for a clean, modern look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* CSS variables for theming */
+:root {
+  --primary: #005d99;
+  --secondary: #003e64;
+  --accent: #ffcc00;
+  --accent-hover: #ffe680;
+  --background: #fafafa;
+  --text: #333;
+  --light-text: #666;
+  --border-radius: 6px;
+  --max-width: 1200px;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+/* General anchor styles */
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Constrained container */
 .container {
-  max-width: 960px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1rem;
 }
 
 /* Header */
 .site-header {
-  background: #005d99;
+  background: var(--primary);
   color: #fff;
   padding: 1rem 0;
 }
+
+.site-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header .branding {
+  display: flex;
+  flex-direction: column;
+}
+
 .site-header .branding h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
+
 .site-header .branding .tagline {
   margin: 0;
   font-size: 0.9rem;
   color: #dbefff;
 }
+
 .site-header .site-nav ul {
   list-style: none;
   margin: 0;
@@ -38,56 +85,89 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
 }
+
 .site-header .site-nav a {
   color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
-.site-header .site-nav a:hover {
-  text-decoration: underline;
-}
-.site-header .cta {
-  margin-top: 0.5rem;
-}
+
 .site-header .cta a {
-  background: #ffcc00;
-  color: #005d99;
+  background: var(--accent);
+  color: var(--primary);
   padding: 0.5rem 1rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
+  border-radius: var(--border-radius);
+  font-weight: 600;
 }
+
 .site-header .cta a:hover {
-  background: #ffe680;
+  background: var(--accent-hover);
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 0 auto 2rem;
+  max-width: 700px;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: var(--primary);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+}
+
+.hero .btn:hover {
+  background: var(--accent-hover);
 }
 
 /* Footer */
 .site-footer {
-  background: #003e64;
+  background: var(--secondary);
   color: #fff;
-  padding: 2rem 0;
+  padding: 3rem 0 2rem;
   font-size: 0.9rem;
 }
+
 .site-footer h3 {
   margin-top: 0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
+
 .site-footer ul {
   list-style: none;
   padding: 0;
 }
+
 .site-footer a {
   color: #fff;
   text-decoration: none;
 }
+
 .site-footer a:hover {
   text-decoration: underline;
 }
+
 .site-footer .footer-columns {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
+
 .site-footer .footer-col {
   flex: 1;
   min-width: 200px;
@@ -95,19 +175,20 @@ body {
 
 .copyright {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-size: 0.8rem;
 }
 
 /* Page & post styles */
 .page-title,
 .post-title {
-  color: #005d99;
+  color: var(--primary);
   margin-top: 0;
 }
+
 .post-meta {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--light-text);
   margin-bottom: 1rem;
 }
 
@@ -115,20 +196,145 @@ body {
   margin-top: 2rem;
   background: #eef7fd;
   padding: 1rem;
-  border-left: 4px solid #005d99;
+  border-left: 4px solid var(--primary);
 }
+
 .post-cta a {
-  color: #005d99;
+  color: var(--primary);
   font-weight: bold;
+}
+
+/* Form styles */
+form {
+  max-width: 600px;
+  margin: 2rem 0;
+}
+
+form p {
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button[type="submit"]:hover {
+  background: #004777;
+}
+
+/* Service grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h3 {
+  margin-top: 0;
+}
+
+.service-card p {
+  color: var(--light-text);
+}
+
+/* Blog post list */
+.post-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.post-list li {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.post-list li h3 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.post-list .post-meta {
+  font-size: 0.8rem;
+  color: var(--light-text);
+  margin-bottom: 0.75rem;
+}
+
+.post-list .read-more {
+  color: var(--primary);
+  font-weight: 600;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .site-header .site-nav ul {
+  .site-header .container {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .site-header .site-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
   .site-footer .footer-columns {
     flex-direction: column;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 }
