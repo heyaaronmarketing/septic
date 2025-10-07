@@ -2,6 +2,7 @@
 
 /* Import the Inter font from Google Fonts for a clean, modern look */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('custom.css');
 
 /* CSS variables for theming */
 :root {
