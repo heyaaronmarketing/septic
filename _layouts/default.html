@@ -1,0 +1,65 @@
+<!--
+  Base layout used by all pages and posts. It defines the overall document structure, head meta tags,
+  JSON‑LD schema for the local business and includes the common header and footer.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  {% if page.description %}
+  <meta name="description" content="{{ page.description | strip_html | truncate: 160 }}">
+  {% else %}
+  <meta name="description" content="{{ site.description | strip_html | truncate: 160 }}">
+  {% endif %}
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | truncate: 160 }}{% else %}{{ site.description | strip_html | truncate: 160 }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.business_name }}">
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+  <!-- Google Analytics script -->
+  {% if site.google_analytics_id and site.google_analytics_id != "" %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics_id }}');
+  </script>
+  {% endif %}
+  <!-- JSON‑LD local business schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "{{ site.business_name }}",
+    {% if site.url and site.url != "" %}
+    "url": "{{ site.url }}{{ site.baseurl }}",
+    {% endif %}
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.address }}",
+      "addressLocality": "{{ site.service_city }}",
+      "addressRegion": "{{ site.service_state }}",
+      "postalCode": "{{ site.service_zip }}",
+      "addressCountry": "US"
+    },
+    "telephone": "{{ site.call_tracking_phone }}",
+    "areaServed": "{{ site.service_city }}, {{ site.service_state }}"
+  }
+  </script>
+</head>
+<body>
+  {% include header.html %}
+  <main class="page-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+  {% include footer.html %}
+</body>
+</html>
