@@ -22,3 +22,19 @@ body {
 p {
   margin-bottom: 1.75rem;
 }
+
+
+/* Logo alignment and sizing */
+.branding {
+  display: flex;
+  align-items: center;
+}
+
+.branding .logo {
+  margin-right: 0.75rem;
+}
+
+.branding .logo svg {
+  width: 48px;
+  height: 48px;
+}
