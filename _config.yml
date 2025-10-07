@@ -7,8 +7,8 @@ description: "Professional window washing services in Huntsville, TX. Residentia
 ## Site URL configuration
 # When you host the site, set `url` to the fully qualified domain name (e.g., https://huntsvillewindows.com).  
 # `baseurl` should remain empty if the site lives at the root of the domain.  
-url: ""
-baseurl: ""
+url: "https://heyaaronmarketing.github.io"
+baseurl: "/septic"
 
 ## Business information used throughout the site and in the schema markup
 business_name: "Huntsville Window Washing"
