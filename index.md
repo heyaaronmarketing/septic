@@ -4,6 +4,16 @@ title: "Window Washing in Huntsville, TX"
 description: "Huntsville Window Washing offers residential and commercial window cleaning, screen cleaning and pressure washing services in Huntsville, Texas and the surrounding area. Call today for a streak‑free shine!"
 ---
 
+<!--
+  The home page has been enhanced with a hero section for a modern, professional feel.
+  The hero introduces the business with a clear value proposition and a call‑to‑action button.
+-->
+<section class="hero">
+  <h2>Streak‑Free Window Cleaning in Huntsville, TX</h2>
+  <p>Let our professionals give your home or business a sparkling view while you relax.</p>
+  <a class="btn" href="{{ site.baseurl }}/contact/">Get a Free Quote</a>
+</section>
+
 ## Crystal‑clear windows without the marketing fluff
 
 You know how smudged windows make everything look dingy? It’s the same feeling I get when I see most service websites – cloudy messaging, bland promises and zero humor. That ends here.
