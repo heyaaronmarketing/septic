@@ -5,28 +5,10 @@
 <header class="site-header">
   <div class="container">
     <div class="branding">
-      <!-- Logo: clean and recognizable window‑cleaning icon with window frame, crossbars, squeegee and sparkle (no text) -->
+      <!-- Logo: Huntsville Windows Cleaners cartoon logo -->
       <div class="logo" aria-hidden="true">
-        <svg width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="logoTitle" xmlns="http://www.w3.org/2000/svg">
-          <title id="logoTitle">Window cleaning icon</title>
-          <!-- Window frame with rounded corners -->
-          <rect x="2" y="2" width="60" height="60" rx="6" ry="6" fill="none" stroke="currentColor" stroke-width="4"/>
-          <!-- Crossbars dividing the window into panes -->
-          <line x1="32" y1="8" x2="32" y2="56" stroke="currentColor" stroke-width="3"/>
-          <line x1="8" y1="32" x2="56" y2="32" stroke="currentColor" stroke-width="3"/>
-          <!-- Squeegee blade and handle rotated to suggest cleaning action -->
-          <g transform="rotate(-45 32 32)">
-            <!-- Blade of the squeegee -->
-            <rect x="8" y="30" width="40" height="6" rx="2" ry="2" fill="currentColor"/>
-            <!-- Handle of the squeegee -->
-            <rect x="52" y="28" width="6" height="14" rx="2" ry="2" fill="currentColor"/>
-          </g>
-          <!-- Sparkle star to indicate a streak‑free shine -->
-          <line x1="46" y1="12" x2="54" y2="12" stroke="currentColor" stroke-width="2"/>
-          <line x1="50" y1="8" x2="50" y2="16" stroke="currentColor" stroke-width="2"/>
-          <line x1="46" y1="10" x2="54" y2="14" stroke="currentColor" stroke-width="2"/>
-          <line x1="46" y1="14" x2="54" y2="10" stroke="currentColor" stroke-width="2"/>
-        </svg>
+        <!-- Use an inline image stored in assets/img -->
+        <img src="{{ site.baseurl }}/assets/img/logo.png" alt="Huntsville Windows Cleaners logo" width="64" height="64" />
       </div>
       <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.business_name }}</a></h1>
       <p class="tagline">Clear views. Clean slate. Get a streak‑free shine in Huntsville.</p>
