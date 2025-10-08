@@ -5,24 +5,27 @@
 <header class="site-header">
   <div class="container">
     <div class="branding">
-      <!-- Logo: award‑worthy creative window washing badge in white -->
-      <div class="logo">
-        <svg width="48" height="48" viewBox="0 0 64 64" aria-labelledby="logoTitle" role="img" xmlns="http://www.w3.org/2000/svg">
-          <title id="logoTitle">{{ site.business_name }} logo</title>
+      <!-- Logo: clean and recognizable window‑cleaning icon with window frame, crossbars, squeegee and sparkle (no text) -->
+      <div class="logo" aria-hidden="true">
+        <svg width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="logoTitle" xmlns="http://www.w3.org/2000/svg">
+          <title id="logoTitle">Window cleaning icon</title>
           <!-- Window frame with rounded corners -->
-          <rect x="4" y="4" width="56" height="56" rx="8" ry="8" fill="none" stroke="#ffffff" stroke-width="4"/>
-          <!-- Crossbars dividing the window into four panes -->
-          <line x1="4" y1="32" x2="60" y2="32" stroke="#ffffff" stroke-width="4"/>
-          <line x1="32" y1="4" x2="32" y2="60" stroke="#ffffff" stroke-width="4"/>
-          <!-- Stylized squeegee blade cutting diagonally across the top right pane -->
-          <polygon points="38,14 54,22 50,28 34,20" fill="#ffffff"/>
-          <!-- Squeegee handle extending from the blade -->
-          <rect x="50" y="14" width="4" height="20" fill="#ffffff"/>
-          <!-- Creative star glint representing a perfect shine -->
-          <path d="M16 8 L18 14 L24 14 L19 17 L21 23 L16 19 L11 23 L13 17 L8 14 L14 14 Z" fill="#ffffff"/>
-          <!-- Additional sparkles to emphasize cleanliness -->
-          <polygon points="46,46 50,46 48,50" fill="#ffffff"/>
-          <polygon points="48,48 52,48 50,52" fill="#ffffff"/>
+          <rect x="2" y="2" width="60" height="60" rx="6" ry="6" fill="none" stroke="currentColor" stroke-width="4"/>
+          <!-- Crossbars dividing the window into panes -->
+          <line x1="32" y1="8" x2="32" y2="56" stroke="currentColor" stroke-width="3"/>
+          <line x1="8" y1="32" x2="56" y2="32" stroke="currentColor" stroke-width="3"/>
+          <!-- Squeegee blade and handle rotated to suggest cleaning action -->
+          <g transform="rotate(-45 32 32)">
+            <!-- Blade of the squeegee -->
+            <rect x="8" y="30" width="40" height="6" rx="2" ry="2" fill="currentColor"/>
+            <!-- Handle of the squeegee -->
+            <rect x="52" y="28" width="6" height="14" rx="2" ry="2" fill="currentColor"/>
+          </g>
+          <!-- Sparkle star to indicate a streak‑free shine -->
+          <line x1="46" y1="12" x2="54" y2="12" stroke="currentColor" stroke-width="2"/>
+          <line x1="50" y1="8" x2="50" y2="16" stroke="currentColor" stroke-width="2"/>
+          <line x1="46" y1="10" x2="54" y2="14" stroke="currentColor" stroke-width="2"/>
+          <line x1="46" y1="14" x2="54" y2="10" stroke="currentColor" stroke-width="2"/>
         </svg>
       </div>
       <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.business_name }}</a></h1>
