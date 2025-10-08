@@ -99,7 +99,20 @@ a:hover {
 
 .site-header .branding {
   display: flex;
-  flex-direction: column;
+  /* Arrange logo, title and tagline horizontally and align them centrally */
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Logo container in the header */
+.site-header .branding .logo {
+  margin-right: 0.75rem;
+}
+
+.site-header .branding .logo img {
+  display: block;
+  height: 64px;
+  width: auto; /* Maintain aspect ratio for wider rectangular logos */
 }
 
 .site-header .branding h1 {
