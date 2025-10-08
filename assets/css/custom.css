@@ -42,13 +42,13 @@ p {
 
 /* Increase logo size for desktop and mobile */
 .branding .logo img {
-  height: 100px;
+  heheight: 120px !important;
   width: auto;
 }
 
 /* Adjust logo size on smaller screens */
 @media (max-width: 600px) {
   .branding .logo img {
-    height: 80px;
+    height: 90px !important;
   }
 }
